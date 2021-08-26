@@ -1,8 +1,12 @@
 require("dotenv").config();
 
 const express = require("express");
+const { connectionMongoDB } = require("./api/configs/database");
 
 const app = express();
+
+//realizamos nuestra conexión a la base de datos.
+connectionMongoDB();
 
 //para poder obtener los datos de la solicitud en formato json
 app.use(express.json());
