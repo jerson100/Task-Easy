@@ -10,4 +10,16 @@ const createTask = async ({ title, description, color }) => {
   return newTask;
 };
 
-module.exports = { createTask };
+const findTasks = async (query = {}, proyection = {}) => {
+  return await Task.find(query, proyection);
+};
+
+const allTasks = async () => {
+  return await findTasks();
+};
+
+const getTask = async (id) => {
+  return await Task.findOne({ _id: id });
+};
+
+module.exports = { createTask, findTasks, allTasks, getTask };
