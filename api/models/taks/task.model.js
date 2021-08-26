@@ -8,6 +8,7 @@ const TaskSchema = new Schema({
   title: String,
   description: String,
   color: String,
+  isComplete: Boolean,
 });
 
 //compilamos el modelo.

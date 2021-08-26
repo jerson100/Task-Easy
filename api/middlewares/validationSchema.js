@@ -3,12 +3,13 @@ const { SchemaValidationError } = require("../helpers/Error");
 
 const validationSchema = (schema, property = "body") => {
   return (req, res, next) => {
-    const { error } = schema.validate(req[property], {
+    const { error, value } = schema.validate(req[property], {
       abortEarly: false,
       convert: false,
     });
     if (error == null) {
       //si es válido
+      req[property] = value;
       next();
     } else {
       const { details } = error;
