@@ -19,8 +19,18 @@ const allTasks = async () => {
   return await findTasks();
 };
 
-const getTask = async (id) => {
+const getTaskById = async (id) => {
   return await Task.findOne({ _id: id });
 };
 
-module.exports = { createTask, findTasks, allTasks, getTask };
+const getTaskByTitle = async (title) => {
+  return await Task.findOne({ title: title });
+};
+
+module.exports = {
+  createTask,
+  findTasks,
+  allTasks,
+  getTaskByTitle,
+  getTaskById,
+};
