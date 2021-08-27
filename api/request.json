@@ -1,0 +1,152 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "taks_easy",
+  "dateExported": "2021-08-27T04:27:43.534Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "name": "tasks",
+      "_id": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "created": "2021-08-26T09:02:42.886Z"
+    }
+  ],
+  "requests": [
+    {
+      "containerId": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "sortNum": 10000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "f115a15c-3feb-4ff6-88ed-d43d187b8363",
+      "name": "create",
+      "url": "http://localhost:1025/api/v1/tasks",
+      "method": "POST",
+      "modified": "2021-08-27T04:15:36.193Z",
+      "created": "2021-08-26T09:02:53.861Z",
+      "_id": "a8dbeb8c-98ab-416c-a121-b6264a80506f",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n   \"title\" : \"My second task4\",\n   \"description\": \"Segunda tarea que tengo que realizar para tener más t\",\n   \"color\": \"#fff\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "sortNum": 20000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "f115a15c-3feb-4ff6-88ed-d43d187b8363",
+      "name": "all",
+      "url": "http://localhost:1025/api/v1/tasks",
+      "method": "GET",
+      "modified": "2021-08-26T21:32:08.175Z",
+      "created": "2021-08-26T19:58:44.670Z",
+      "_id": "0302b35d-b81a-494b-8f3b-b7daf79b339c",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "sortNum": 30000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "f115a15c-3feb-4ff6-88ed-d43d187b8363",
+      "name": "Id",
+      "url": "http://localhost:1025/api/v1/tasks/61280e81b48f3cef2eceefec",
+      "method": "GET",
+      "modified": "2021-08-27T03:29:10.893Z",
+      "created": "2021-08-26T21:32:22.268Z",
+      "_id": "407de97d-ec01-4f87-97fe-4ccbb4cf6517",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "sortNum": 40000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "f115a15c-3feb-4ff6-88ed-d43d187b8363",
+      "name": "delete",
+      "url": "http://localhost:1025/api/v1/tasks/61280e2ceeae3f7a95d6a832",
+      "method": "DELETE",
+      "modified": "2021-08-27T02:57:37.926Z",
+      "created": "2021-08-27T02:56:02.519Z",
+      "_id": "d361e477-4ad0-432a-942e-6adf69e519bc",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "sortNum": 50000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "f115a15c-3feb-4ff6-88ed-d43d187b8363",
+      "name": "patch",
+      "url": "http://localhost:1025/api/v1/tasks/61280e81b48f3cef2eceefec",
+      "method": "PATCH",
+      "modified": "2021-08-27T04:15:57.783Z",
+      "created": "2021-08-27T03:28:19.531Z",
+      "_id": "29419cc0-7237-48bf-a272-2ce2c13362bf",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"isComplete\": true\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "3a63b794-8e14-4d06-8e64-ada16e764341",
+      "sortNum": 60000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "f115a15c-3feb-4ff6-88ed-d43d187b8363",
+      "name": "put",
+      "url": "http://localhost:1025/api/v1/tasks/61280e81b48f3cef2eceefec",
+      "method": "PUT",
+      "modified": "2021-08-27T04:16:14.711Z",
+      "created": "2021-08-27T04:00:05.886Z",
+      "_id": "3efa8281-5d89-4ea9-81f5-23a0023083ef",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"isComplete\": true,\n    \"title\": \"Titulo modificado\",\n    \"description\": \"Descripción modificada\",\n    \"color\":\"red\"\n}",
+        "form": []
+      },
+      "tests": []
+    }
+  ]
+}
