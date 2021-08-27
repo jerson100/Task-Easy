@@ -27,10 +27,20 @@ const getTaskByTitle = async (title) => {
   return await Task.findOne({ title: title });
 };
 
+const deleteTask = async (id) => {
+  return await Task.deleteOne({ _id: id });
+};
+
+const updateTask = async (id, obj = {}) => {
+  return await Task.findOneAndUpdate({ _id: id }, { $set: obj }, { new: true });
+};
+
 module.exports = {
   createTask,
   findTasks,
   allTasks,
   getTaskByTitle,
   getTaskById,
+  deleteTask,
+  updateTask,
 };

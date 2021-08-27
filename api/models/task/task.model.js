@@ -4,12 +4,15 @@ const { Schema, model } = require("mongoose");
 //Los esquemas definenen la estructura o la forma
 //de los documentos dentro de las colecciones.
 //los esquemas se asocian a las colecciones.
-const TaskSchema = new Schema({
-  title: String,
-  description: String,
-  color: String,
-  isComplete: Boolean,
-});
+const TaskSchema = new Schema(
+  {
+    title: String,
+    description: String,
+    color: String,
+    isComplete: Boolean,
+  },
+  { timestamps: true }
+);
 
 //compilamos el modelo.
 const Task = model("Task", TaskSchema);
