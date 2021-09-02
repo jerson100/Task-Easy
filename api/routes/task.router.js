@@ -26,8 +26,8 @@ Router.route("/")
     validationSchema(CreateTaskSchema, "body"),
     isExists("body", "title"),
     processError(async (req, res) => {
-      await TaskController.createTask(req.body);
-      res.status(201).send();
+      const t = await TaskController.createTask(req.body);
+      res.status(201).send({ data: t });
     })
   );
 
@@ -49,6 +49,8 @@ Router.route("/:id")
       res.status(204).json();
     })
   )
+  //Aquí tenemos que hacer una validación para que podas actualizar el titulo con
+  //la condición que ese titulo no exista para otra tarea que no sea la misma...
   .patch(
     validationSchema(validateObjectIdSchema(), "params"),
     validationSchema(PatchTaskSchema, "body"),

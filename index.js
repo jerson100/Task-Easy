@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
 const { connectionMongoDB } = require("./api/configs/database");
 
 const app = express();
@@ -9,6 +10,7 @@ const app = express();
 connectionMongoDB();
 
 //para poder obtener los datos de la solicitud en formato json
+app.use(cors());
 app.use(express.json());
 
 //first route method
