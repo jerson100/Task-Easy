@@ -39,9 +39,9 @@ app.use((error, req, res, next) => {
     });
   } else {
     res.send({
-      message: error.stack
-        ? "Ocurrió un error en el servidor, inténtelo más tarde o póngase en contacto con el administrador"
-        : message,
+      message: error.status
+        ? message
+        : "Ocurrió un error en el servidor, inténtelo más tarde o póngase en contacto con el administrador",
     });
   }
 });
