@@ -40,7 +40,7 @@ app.use((error, req, res, next) => {
   } else {
     res.send({
       message: error.status
-        ? message
+        ? error.message
         : "Ocurrió un error en el servidor, inténtelo más tarde o póngase en contacto con el administrador",
     });
   }
